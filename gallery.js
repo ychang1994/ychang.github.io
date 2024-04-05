@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   const sheetId = '1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k';
   const apiKey = '02102f9cafe912c4e0ade57db08329d98720f757';
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/${1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k}/values/Sheet1!A2:D?key=${02102f9cafe912c4e0ade57db08329d98720f757}`;
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Sheet1!A2:D?key=${apiKey}`;
 
   fetch(url)
     .then(response => response.json())
