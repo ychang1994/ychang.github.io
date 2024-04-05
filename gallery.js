@@ -1,33 +1,51 @@
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const serviceAccount = require('./path/to/service-account-key.json');
+
 document.addEventListener('DOMContentLoaded', function() {
+  async function accessSpreadsheet() {
+    const doc = new GoogleSpreadsheet('1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k');
 
-  const sheetId = '1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k';
-  const apiKey = '02102f9cafe912c4e0ade57db08329d98720f757';
-  const url = `https://sheets.googleapis.com/v4/spreadsheets/1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k/values/Sheet1!A2:D?key=02102f9cafe912c4e0ade57db08329d98720f757`;
+    try {
+      // 使用服务帐号凭据进行身份验证
+      await doc.useServiceAccountAuth({
+        client_email: serviceAccount.client_email,
+        private_key: serviceAccount.private_key,
+      });
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const rows = data.values; // 获取数据行
-      const galleryElement = document.getElementById('gallery'); // 获取gallery元素
+      // 加载文档信息
+      await doc.loadInfo();
+
+      // 获取表格
+      const sheet = doc.sheetsByIndex[0];
+
+      // 读取数据
+      const rows = await sheet.getRows();
+
+      // 获取gallery元素
+      const galleryElement = document.getElementById('gallery');
 
       // 清空gallery元素内部的HTML
       galleryElement.innerHTML = '';
 
       // 为每一行数据创建一个卡片并添加到gallery中
       rows.forEach(row => {
-        const [id, imageUrl, description, likes] = row;
         const cardHtml = `
           <div class="card">
-            <img src="${imageUrl}" alt="${description}">
-            <p>${description}</p>
-            <p>Likes: ${likes}</p>
-            <button onclick="increaseLikes('${id}')">Like</button>
+            <img src="${row.imageUrl}" alt="${row.description}">
+            <p>${row.description}</p>
+            <p>Likes: ${row.likes}</p>
+            <button onclick="increaseLikes('${row.id}')">Like</button>
           </div>
         `;
         galleryElement.innerHTML += cardHtml; // 将卡片添加到gallery
       });
-    })
-    .catch(error => console.error('Error:', error)); 
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
+  // 页面加载完成时，调用访问表格的函数
+  accessSpreadsheet();
 
   // 点赞功能示例函数
   function increaseLikes(id) {
