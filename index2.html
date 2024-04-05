@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js loading">
 <head>
-    <link rel="stylesheet" href="style.css"> <!-- 新增 -->
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Infinite WebGL Gallery | Demo 2 | Codrops</title>
@@ -10,13 +10,12 @@
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/zvj1jsw.css">
-    <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
     <link href="main.d263f564555a055f4d35.css" rel="stylesheet">
 </head>
 
 <body data-id="1">
 <main>
-    <div id="gallery"></div> <!-- 新增 -->
+    <div id="gallery"></div>
     <div class="frame">
         <div class="frame__title-wrap">
             <h1 class="frame__title">Infinite WebGL Scrolling Gallery</h1>
@@ -42,40 +41,41 @@
             </h1>
         </div>
 
-        <div class="demo-2__gallery">
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/1.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/2.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/3.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/4.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/5.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/6.jpg">
-            </figure>
-
-            <figure class="demo-2__gallery__figure">
-                <img class="demo-2__gallery__image" src="images/demo-2/7.jpg">
-            </figure>
+        <div class="demo-2__gallery" id="gallery">
+            <!-- Google Sheets API 加载的数据将显示在这里 -->
         </div>
     </div>
 </main>
 
-<!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
 <script type="text/javascript" src="main.aa1e6c08c8704276560a.js"></script>
-<script src="gallery.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script>
+    // 在页面加载完成后调用 Google Sheets API 加载数据
+    document.addEventListener('DOMContentLoaded', function() {
+        const sheetId = '1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k';
+        const apiKey = '02102f9cafe912c4e0ade57db08329d98720f757';
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/1EJPFPdGzXBwTCQUBxBV9MvlRq62vPvSXxjnsqTYfk2k/values/Sheet1!A2:D?key=02102f9cafe912c4e0ade57db08329d98720f757`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const galleryElement = document.getElementById('gallery');
+                // 清空gallery元素内部的HTML
+                galleryElement.innerHTML = '';
+
+                // 为每一行数据创建一个卡片并添加到gallery中
+                data.values.forEach(row => {
+                    const [imageUrl, description] = row;
+                    const cardHtml = `
+                        <figure class="demo-2__gallery__figure">
+                            <img class="demo-2__gallery__image" src="${imageUrl}" alt="${description}">
+                        </figure>
+                    `;
+                    galleryElement.innerHTML += cardHtml; // 将卡片添加到gallery
+                });
+            })
+            .catch(error => console.error('Error:', error)); 
+    });
+</script>
 </body>
 </html>
