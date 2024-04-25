@@ -4,159 +4,62 @@
     box-sizing: border-box;
 }
 
-html {
-    background: #0c0c0c;
-    color: #fff;
-    font-size: calc(100vw / 1920 * 10);
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    user-select: none;
+html, body {
     width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 body {
     font-family: 'halyard-display', sans-serif;
-    font-size: 15px;
-    margin: 0;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    overscroll-behavior-y: none;
-}
-
-.frame {
-    font-size: 15px;
-    padding: 3rem;
-    text-align: center;
-    position: relative;
-    z-index: 1000;
-}
-
-.frame__title {
-    font-size: 15px;
-    margin: 0 0 15px;
-    font-weight: normal;
-}
-
-.frame__links, .frame__demos {
-    margin: 15px 0;
-}
-
-.frame a, .frame__links a:not(:last-child), .frame__demos a:not(:last-child) {
     color: #fff;
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    vertical-align: top;
-    transition: transform 0.4s ease;
-    pointer-events: auto;
-}
-
-.frame a:hover, a:focus {
-    outline: none;
-}
-
-@media screen and (min-width: 53em) {
-    .frame {
-        position: fixed;
-        text-align: left;
-        z-index: 100;
-        top: 0;
-        left: 0;
-        display: grid;
-        align-content: space-between;
-        width: 100%;
-        max-width: none;
-        height: 100vh;
-        padding: 3rem;
-        pointer-events: none;
-        grid-template-columns: 75% 25%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 'title links' '... ...' 'credits demos';
-    }
-
-    .frame__title-wrap {
-        grid-area: title;
-        display: flex;
-    }
-
-    .frame__links, .frame__demos {
-        justify-self: end;
-        padding: 0;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .frame__credits {
-        grid-area: credits;
-    }
-}
-
-.demo-1 {
-    height: 100%;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
-
-.demo-1__header {
-    align-items: center;
+    background-color: #0c0c0c;
     display: flex;
-    flex-direction: column;
-    height: 100%;
+    align-items: center;
     justify-content: center;
-    left: 0;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2;
-}
-
-.loaded .demo-1__header {
-    opacity: 1;
-    transition: opacity 0.4s ease;
-}
-
-.demo-1__title {
-    font: 800 20rem/1 'moret', serif;
-}
-
-.demo-1__description {
-    font-size: 2rem;
-    margin-top: -1rem;
-    opacity: 0.75;
 }
 
 .demo-1__gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-auto-rows: 180px;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 5px;
+    gap: 5px;
     width: 100%;
     height: auto;
-    overflow: hidden;
-    padding: 10px;
     position: relative;
 }
 
 .demo-1__gallery__figure {
+    flex: 1 0 18%; /* 设置图片占用行宽的18%，自动调整数量 */
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    margin: 5px;
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    height: 100%;
+    height: 200px; /* 设置固定高度，可根据需要调整 */
 }
 
 .demo-1__gallery__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.demo-1__gallery__figure:hover .demo-1__gallery__image {
+    transform: scale(1.1); /* 图片放大效果 */
+}
+
+@media (max-width: 768px) {
+    .demo-1__gallery__figure {
+        flex: 1 0 46%; /* 小屏幕上每行两张图 */
+    }
+}
+
+@media (max-width: 480px) {
+    .demo-1__gallery__figure {
+        flex: 1 0 100%; /* 极小屏幕上每行一张图 */
+    }
 }
