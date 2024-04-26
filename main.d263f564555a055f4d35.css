@@ -326,7 +326,7 @@ a {
 }
 
 .demo-1__gallery {
-    height: 295rem;
+    height: 2545rem;
     position: relative;
     visibility:hidden
 }
@@ -423,6 +423,53 @@ a {
     width:50rem
 }
 
+.demo-1__gallery__figure:nth-child(1) { height: 40rem; width: 70rem; left: 0rem; top: 0rem; }
+.demo-1__gallery__figure:nth-child(2) { height: 50rem; width: 40rem; left: 85rem; top: 30rem; }
+.demo-1__gallery__figure:nth-child(3) { height: 50rem; width: 60rem; left: 15rem; top: 60rem; }
+.demo-1__gallery__figure:nth-child(4) { height: 30rem; width: 50rem; left: 0rem; top: 10rem; }
+.demo-1__gallery__figure:nth-child(5) { height: 60rem; width: 40rem; left: 15rem; top: 55rem; }
+.demo-1__gallery__figure:nth-child(6) { height: 75rem; width: 57.5rem; left: 5rem; top: 120rem; }
+.demo-1__gallery__figure:nth-child(7) { height: 70rem; width: 50rem; left: 0rem; top: 130rem; }
+.demo-1__gallery__figure:nth-child(8) { height: 50rem; width: 40rem; left: 85rem; top: 95rem; }
+.demo-1__gallery__figure:nth-child(9) { height: 65rem; width: 50rem; left: 75rem; top: 155rem; }
+.demo-1__gallery__figure:nth-child(10) { height: 43rem; width: 30rem; left: 0rem; top: 215rem; }
+.demo-1__gallery__figure:nth-child(11) { height: 50rem; width: 80rem; left: 70rem; top: 235rem; }
+.demo-1__gallery__figure:nth-child(12) { height: 70rem; width: 50rem; left: 0rem; top: 210rem; }
+
+/* 第 13 - 24 张 */
+.demo-1__gallery__figure:nth-child(13) { height: 40rem; width: 70rem; left: 0rem; top: 295rem; }
+.demo-1__gallery__figure:nth-child(14) { height: 50rem; width: 40rem; left: 85rem; top: 325rem; }
+.demo-1__gallery__figure:nth-child(15) { height: 50rem; width: 60rem; left: 15rem; top: 355rem; }
+.demo-1__gallery__figure:nth-child(16) { height: 30rem; width: 50rem; left: 0rem; top: 305rem; }
+.demo-1__gallery__figure:nth-child(17) { height: 60rem; width: 40rem; left: 15rem; top: 360rem; }
+.demo-1__gallery__figure:nth-child(18) { height: 75rem; width: 57.5rem; left: 5rem; top: 425rem; }
+.demo-1__gallery__figure:nth-child(19) { height: 70rem; width: 50rem; left: 0rem; top: 455rem; }
+.demo-1__gallery__figure:nth-child(20) { height: 50rem; width: 40rem; left: 85rem; top: 410rem; }
+.demo-1__gallery__figure:nth-child(21) { height: 65rem; width: 50rem; left: 75rem; top: 475rem; }
+.demo-1__gallery__figure:nth-child(22) { height: 43rem; width: 30rem; left: 0rem; top: 525rem; }
+.demo-1__gallery__figure:nth-child(23) { height: 50rem; width: 80rem; left: 70rem; top: 545rem; }
+.demo-1__gallery__figure:nth-child(24) { height: 70rem; width: 50rem; left: 0rem; top: 520rem; }
+
+/* 第 25 - 36 张 */
+.demo-1__gallery__figure:nth-child(25) { height: 40rem; width: 70rem; left: 0rem; top: 590rem; }
+.demo-1__gallery__figure:nth-child(26) { height: 50rem; width: 40rem; left: 85rem; top: 620rem; }
+.demo-1__gallery__figure:nth-child(27) { height: 50rem; width: 60rem; left: 15rem; top: 650rem; }
+.demo-1__gallery__figure:nth-child(28) { height: 30rem; width: 50rem; left: 0rem; top: 600rem; }
+.demo-1__gallery__figure:nth-child(29) { height: 60rem; width: 40rem; left: 15rem; top: 655rem; }
+.demo-1__gallery__figure:nth-child(30) { height: 75rem; width: 57.5rem; left: 5rem; top: 720rem; }
+.demo-1__gallery__figure:nth-child(31) { height: 70rem; width: 50rem; left: 0rem; top: 750rem; }
+.demo-1__gallery__figure:nth-child(32) { height: 50rem; width: 40rem; left: 85rem; top: 705rem; }
+.demo-1__gallery__figure:nth-child(33) { height: 65rem; width: 50rem; left: 75rem; top: 770rem; }
+.demo-1__gallery__figure:nth-child(34) { height: 43rem; width: 30rem; left: 0rem; top: 820rem; }
+.demo-1__gallery__figure:nth-child(35) { height: 50rem; width: 80rem; left: 70rem; top: 840rem; }
+.demo-1__gallery__figure:nth-child(36) { height: 70rem; width: 50rem; left: 0rem; top: 815rem; }
+
+/* 其余图像依此类推... */
+
+
+
+
+
 @media (max-width: 1200px) {
     .demo-1__gallery__figure:nth-child(1) {
         height: 60rem;
@@ -512,6 +559,8 @@ a {
         width:90rem
     }
 }
+
+
 
 .demo-1__gallery__image {
     height: 100%;
