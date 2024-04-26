@@ -326,7 +326,7 @@ a {
 }
 
 .demo-1__gallery {
-    height: 900rem;
+    height: 1975rem;
     position: relative;
     visibility:hidden
 }
@@ -452,7 +452,80 @@ a {
 .demo-1__gallery__figure:nth-child(35) { height: 50rem; width: 80rem; left: 70rem; top: 840rem; }
 .demo-1__gallery__figure:nth-child(36) { height: 70rem; width: 50rem; left: 0rem; top: 815rem; }
 
-/* 其余图像依此类推... */
+/* 第 37 - 48 张 */
+.demo-1__gallery__figure:nth-child(37) { height: 40rem; width: 70rem; left: 0rem; top: 885rem; }
+.demo-1__gallery__figure:nth-child(38) { height: 50rem; width: 40rem; left: 85rem; top: 915rem; }
+.demo-1__gallery__figure:nth-child(39) { height: 50rem; width: 60rem; left: 15rem; top: 945rem; }
+.demo-1__gallery__figure:nth-child(40) { height: 30rem; width: 50rem; left: 0rem; top: 895rem; }
+.demo-1__gallery__figure:nth-child(41) { height: 60rem; width: 40rem; left: 15rem; top: 950rem; }
+.demo-1__gallery__figure:nth-child(42) { height: 75rem; width: 57.5rem; left: 5rem; top: 1015rem; }
+.demo-1__gallery__figure:nth-child(43) { height: 70rem; width: 50rem; left: 0rem; top: 1045rem; }
+.demo-1__gallery__figure:nth-child(44) { height: 50rem; width: 40rem; left: 85rem; top: 1000rem; }
+.demo-1__gallery__figure:nth-child(45) { height: 65rem; width: 50rem; left: 75rem; top: 1065rem; }
+.demo-1__gallery__figure:nth-child(46) { height: 43rem; width: 30rem; left: 0rem; top: 1115rem; }
+.demo-1__gallery__figure:nth-child(47) { height: 50rem; width: 80rem; left: 70rem; top: 1135rem; }
+.demo-1__gallery__figure:nth-child(48) { height: 70rem; width: 50rem; left: 0rem; top: 1110rem; }
+
+/* 第 49 - 60 张 */
+.demo-1__gallery__figure:nth-child(49) { height: 40rem; width: 70rem; left: 0rem; top: 1180rem; }
+.demo-1__gallery__figure:nth-child(50) { height: 50rem; width: 40rem; left: 85rem; top: 1210rem; }
+.demo-1__gallery__figure:nth-child(51) { height: 50rem; width: 60rem; left: 15rem; top: 1240rem; }
+.demo-1__gallery__figure:nth-child(52) { height: 30rem; width: 50rem; left: 0rem; top: 1190rem; }
+.demo-1__gallery__figure:nth-child(53) { height: 60rem; width: 40rem; left: 15rem; top: 1245rem; }
+.demo-1__gallery__figure:nth-child(54) { height: 75rem; width: 57.5rem; left: 5rem; top: 1310rem; }
+.demo-1__gallery__figure:nth-child(55) { height: 70rem; width: 50rem; left: 0rem; top: 1340rem; }
+.demo-1__gallery__figure:nth-child(56) { height: 50rem; width: 40rem; left: 85rem; top: 1295rem; }
+.demo-1__gallery__figure:nth-child(57) { height: 65rem; width: 50rem; left: 75rem; top: 1360rem; }
+.demo-1__gallery__figure:nth-child(58) { height: 43rem; width: 30rem; left: 0rem; top: 1410rem; }
+.demo-1__gallery__figure:nth-child(59) { height: 50rem; width: 80rem; left: 70rem; top: 1430rem; }
+.demo-1__gallery__figure:nth-child(60) { height: 70rem; width: 50rem; left: 0rem; top: 1405rem; }
+
+/* 第 61 - 72 张 */
+.demo-1__gallery__figure:nth-child(61) { height: 40rem; width: 70rem; left: 0rem; top: 1170rem; }
+.demo-1__gallery__figure:nth-child(62) { height: 50rem; width: 40rem; left: 85rem; top: 1180rem; }
+.demo-1__gallery__figure:nth-child(63) { height: 50rem; width: 60rem; left: 15rem; top: 1145rem; }
+.demo-1__gallery__figure:nth-child(64) { height: 30rem; width: 50rem; left: 0rem; top: 1205rem; }
+.demo-1__gallery__figure:nth-child(65) { height: 60rem; width: 40rem; left: 15rem; top: 1265rem; }
+.demo-1__gallery__figure:nth-child(66) { height: 75rem; width: 57.5rem; left: 5rem; top: 1285rem; }
+.demo-1__gallery__figure:nth-child(67) { height: 70rem; width: 50rem; left: 0rem; top: 1260rem; }
+.demo-1__gallery__figure:nth-child(68) { height: 50rem; width: 40rem; left: 85rem; top: 1290rem; }
+.demo-1__gallery__figure:nth-child(69) { height: 65rem; width: 50rem; left: 75rem; top: 1320rem; }
+.demo-1__gallery__figure:nth-child(70) { height: 43rem; width: 30rem; left: 0rem; top: 1270rem; }
+.demo-1__gallery__figure:nth-child(71) { height: 50rem; width: 80rem; left: 70rem; top: 1315rem; }
+.demo-1__gallery__figure:nth-child(72) { height: 70rem; width: 50rem; left: 0rem; top: 1380rem; }
+
+/* 第 73 - 84 张 */
+.demo-1__gallery__figure:nth-child(73) { height: 40rem; width: 70rem; left: 0rem; top: 1390rem; }
+.demo-1__gallery__figure:nth-child(74) { height: 50rem; width: 40rem; left: 85rem; top: 1355rem; }
+.demo-1__gallery__figure:nth-child(75) { height: 50rem; width: 60rem; left: 15rem; top: 1415rem; }
+.demo-1__gallery__figure:nth-child(76) { height: 30rem; width: 50rem; left: 0rem; top: 1475rem; }
+.demo-1__gallery__figure:nth-child(77) { height: 60rem; width: 40rem; left: 15rem; top: 1495rem; }
+.demo-1__gallery__figure:nth-child(78) { height: 75rem; width: 57.5rem; left: 5rem; top: 1470rem; }
+.demo-1__gallery__figure:nth-child(79) { height: 70rem; width: 50rem; left: 0rem; top: 1500rem; }
+.demo-1__gallery__figure:nth-child(80) { height: 50rem; width: 40rem; left: 85rem; top: 1530rem; }
+.demo-1__gallery__figure:nth-child(81) { height: 65rem; width: 50rem; left: 75rem; top: 1480rem; }
+.demo-1__gallery__figure:nth-child(82) { height: 43rem; width: 30rem; left: 0rem; top: 1525rem; }
+.demo-1__gallery__figure:nth-child(83) { height: 50rem; width: 80rem; left: 70rem; top: 1590rem; }
+.demo-1__gallery__figure:nth-child(84) { height: 70rem; width: 50rem; left: 0rem; top: 1600rem; }
+
+/* 第 85 - 100
+.demo-1__gallery__figure:nth-child(85) { height: 40rem; width: 70rem; left: 0rem; top: 1565rem; }
+.demo-1__gallery__figure:nth-child(86) { height: 50rem; width: 40rem; left: 85rem; top: 1625rem; }
+.demo-1__gallery__figure:nth-child(87) { height: 50rem; width: 60rem; left: 15rem; top: 1685rem; }
+.demo-1__gallery__figure:nth-child(88) { height: 30rem; width: 50rem; left: 0rem; top: 1705rem; }
+.demo-1__gallery__figure:nth-child(89) { height: 60rem; width: 40rem; left: 15rem; top: 1680rem; }
+.demo-1__gallery__figure:nth-child(90) { height: 75rem; width: 57.5rem; left: 5rem; top: 1710rem; }
+.demo-1__gallery__figure:nth-child(91) { height: 70rem; width: 50rem; left: 0rem; top: 1740rem; }
+.demo-1__gallery__figure:nth-child(92) { height: 50rem; width: 40rem; left: 85rem; top: 1690rem; }
+.demo-1__gallery__figure:nth-child(93) { height: 65rem; width: 50rem; left: 75rem; top: 1735rem; }
+.demo-1__gallery__figure:nth-child(94) { height: 43rem; width: 30rem; left: 0rem; top: 1800rem; }
+.demo-1__gallery__figure:nth-child(95) { height: 50rem; width: 80rem; left: 70rem; top: 1810rem; }
+.demo-1__gallery__figure:nth-child(96) { height: 70rem; width: 50rem; left: 0rem; top: 1775rem; }
+
+.demo-1__gallery__figure:nth-child(97) { height: 40rem; width: 70rem; left: 0rem; top: 1835rem; }
+.demo-1__gallery__figure:nth-child(98) { height: 50rem; width: 40rem; left: 85rem; top: 1895rem; }
+.demo-1__gallery__figure:nth-child(99) { height: 50rem; width: 60rem; left: 15rem; top: 1915rem; }
+.demo-1__gallery__figure:nth-child(100) { height: 30rem; width: 50rem; left: 0rem; top: 1890rem; }
 
 
 
