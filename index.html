@@ -10,8 +10,9 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.typekit.net/zvj1jsw.css">
     <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
-  <link href="main.d263f564555a055f4d35.css" rel="stylesheet"></head>
-
+    <link href="main.d263f564555a055f4d35.css" rel="stylesheet"></head>
+    <style id="dynamic-styles"></style>
+  
   <body data-id="0">
     <main>
       <div class="frame">
@@ -345,5 +346,47 @@
     </main>
 
     <!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
-  <script type="text/javascript" src="main.aa1e6c08c8704276560a.js"></script></body>
+  <script type="text/javascript" src="main.aa1e6c08c8704276560a.js"></script>
+  <script>
+        function generateCSS() {
+            let output = "";
+             let height = 40; // starting height in rem
+    let width = 70; // starting width in rem
+    let top = 30; // starting top in rem
+    let left = 0; // starting left in rem
+    let right = 0; // starting right in rem
+    let topIncrement = 15; // incremental increase in top
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % 2 === 1) { // Odd figures positioned from the left
+            left = 5 + ((i - 1) % 10) * 10; // Increment left for visual diversity
+            output += `.demo-1__gallery__figure:nth-child(${i}) {
+                height: ${height}rem;
+                width: ${width}rem;
+                left: ${left}rem;
+                top: ${top}rem;
+            }\n`;
+        } else { // Even figures positioned from the right
+            right = 5 + ((i - 1) % 10) * 10; // Increment right for visual diversity
+            output += `.demo-1__gallery__figure:nth-child(${i}) {
+                height: ${height}rem;
+                width: ${width}rem;
+                right: ${right}rem;
+                top: ${top}rem;
+            }\n`;
+        }
+        top += topIncrement; // Increase the top position incrementally
+
+        // Increase dimensions randomly or according to a pattern (simplified here)
+        height = (height + 5) % 75 + 25; // Cycle height between 25rem and 100rem
+        width = (width + 5) % 75 + 25; // Cycle width between 25rem and 100rem
+    }
+
+
+            return output;
+        }
+
+        document.getElementById('dynamic-styles').textContent = generateCSS();
+    </script>
+</body>
 </html>
