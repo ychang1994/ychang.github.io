@@ -423,9 +423,6 @@ a {
     width:50rem
 }
 
-
-
-
 @media (max-width: 1200px) {
     .demo-1__gallery__figure:nth-child(1) {
         height: 60rem;
